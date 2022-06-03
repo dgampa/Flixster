@@ -46,10 +46,10 @@ public class MovieDetailsActivity extends AppCompatActivity {
         String imageUrl;
         if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
             imageUrl = movie.getBackdropPath();
-            //Glide.with(context).load(imageUrl).placeholder(R.drawable.flicks_backdrop_placeholder).into(ivPoster);
+            Glide.with(this).load(imageUrl).placeholder(R.drawable.flicks_backdrop_placeholder).into(ivPoster);
         } else {
             imageUrl = movie.getPosterPath();
-            //Glide.with(context).load(imageUrl).placeholder(R.drawable.flicks_movie_placeholder).into(ivPoster);
+            Glide.with(this).load(imageUrl).placeholder(R.drawable.flicks_movie_placeholder).into(ivPoster);
         }
         Glide.with(this).load(imageUrl).into(ivPoster);
 
